@@ -94,7 +94,6 @@ class Auth extends BaseController
             'email'    => $this->request->getVar('email'),
             'role'    => $this->request->getVar('role'),
             'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
-            // 'role_id'    => $this->request->getVar('role_id'),
         ];
 
         $userModel->insert($data);
